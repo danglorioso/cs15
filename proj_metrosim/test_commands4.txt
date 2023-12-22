@@ -1,0 +1,20 @@
+m m
+p 1 1
+m m
+p 1 25
+m m
+p 25 1
+m m
+p 2 24
+m m
+p 24 2
+m m
+p 3 23
+m m
+p 23 3
+m m
+p 4 22
+m m
+p 22 4
+m m
+p 5 21

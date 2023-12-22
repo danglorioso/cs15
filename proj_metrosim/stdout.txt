@@ -1,0 +1,736 @@
+Passengers on the train: {}
+TRAIN: [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+TRAIN: [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+TRAIN: [1] Davis {}
+       [2] Porter {[1, 2->4]}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+       [1] Davis {}
+TRAIN: [2] Porter {[1, 2->4]}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+       [1] Davis {}
+TRAIN: [2] Porter {[1, 2->4]}
+       [3] Harvard {[2, 3->6]}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[1, 2->4]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+TRAIN: [3] Harvard {[2, 3->6]}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[1, 2->4]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+TRAIN: [3] Harvard {[2, 3->6]}
+       [4] Central {}
+       [5] KendallMIT {[3, 5->8]}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[2, 3->6]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+TRAIN: [4] Central {}
+       [5] KendallMIT {[3, 5->8]}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[2, 3->6]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+TRAIN: [4] Central {}
+       [5] KendallMIT {[3, 5->8]}
+       [6] CharlesMGH {}
+       [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[2, 3->6]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+TRAIN: [5] KendallMIT {[3, 5->8]}
+       [6] CharlesMGH {}
+       [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[2, 3->6]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+TRAIN: [5] KendallMIT {[3, 5->8]}
+       [6] CharlesMGH {}
+       [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[3, 5->8]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+TRAIN: [6] CharlesMGH {}
+       [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[3, 5->8]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+TRAIN: [6] CharlesMGH {}
+       [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[3, 5->8]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+TRAIN: [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[3, 5->8]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+TRAIN: [7] Park Street {[4, 7->9]}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[4, 7->9]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+TRAIN: [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {[4, 7->9]}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+TRAIN: [8] Downtown Crossing {}
+       [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {[8, 18->20]}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+TRAIN: [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {[8, 18->20]}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+TRAIN: [9] South Station {}
+       [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {[8, 18->20]}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {[9, 21->23]}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+TRAIN: [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {[8, 18->20]}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {[9, 21->23]}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Passengers on the train: {}
+       [0] Alewife {}
+       [1] Davis {}
+       [2] Porter {}
+       [3] Harvard {}
+       [4] Central {}
+       [5] KendallMIT {}
+       [6] CharlesMGH {}
+       [7] Park Street {}
+       [8] Downtown Crossing {}
+       [9] South Station {}
+TRAIN: [10] Broadway {[5, 10->12]}
+       [11] Andrew {}
+       [12] JFKUMass {}
+       [13] Savin Hill {[6, 13->15]}
+       [14] Fields Corner {}
+       [15] Shawmut {}
+       [16] Ashmont {[7, 16->17]}
+       [17] Alewife {}
+       [18] Davis {[8, 18->20]}
+       [19] Porter {}
+       [20] Harvard {}
+       [21] Central {[9, 21->23]}
+       [22] KendallMIT {}
+       [23] CharlesMGH {}
+       [24] Park Street {[10, 24->25]}
+       [25] Downtown Crossing {}
+       [26] South Station {}
+       [27] Broadway {}
+       [28] Andrew {}
+       [29] JFKUMass {}
+       [30] Savin Hill {}
+       [31] Fields Corner {}
+       [32] Shawmut {}
+       [33] Ashmont {}
+Command? Thanks for playing MetroSim. Have a nice day!
