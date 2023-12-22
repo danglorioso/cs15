@@ -1,1 +1,0 @@
-Success! Encoded given text using 9277380 bits.
