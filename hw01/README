@@ -1,0 +1,144 @@
+(A) The title of the homework and the author’s name (you): 
+ 
+    CS15 HW1: ArrayLists
+    Author: Dan Glorioso (dglori02)
+    Date: 09/19/2023
+
+
+(B) The purpose of the program: 
+    This program implements an array list of characters. The user can add 
+    characters to the list, remove characters from the list, and access 
+    characters in the list. The program also times how long each of these 
+    operations takes.
+
+
+(C) Acknowledgements for any help you received
+    I worked on this assignment indepdently. My CharArrayList constructors, 
+    elementAt, and size functions were based on live demonstrastion in CS15 
+    lectures. My copy constructor is also based on lecture, mainly the 
+    ArrayLists slides. I learned how to do exceptions by watching the virtual 
+    mini-lecture (https://youtu.be/smdk76M28PA?feature=shared) and viewing the
+    provided example file exceptions.cpp. 
+
+
+(D) The files that you provided and a short description of what each file is
+and its purpose:
+
+    CharArrayList.cpp: Implementation of CharArrayList class which includes a
+    default constructor, parametrized constructor, copy constructor, assignment
+    operator, destructor, and functions that add, remove, and access elements
+    in the array list.
+
+    CharArrayList.h: Interface of CharArrayList class, which includes private 
+    and public information regarding CharArrayList objects that are implemented
+    in CharArrayList.cpp.
+
+    unit_tests.h: Provides unit tests for CharArrayList functions defined in 
+    CharArrayList.cpp. Each function contains a number of tests that tests the
+    function in a variety of ways as well as edge cases.
+
+
+(E) How to compile and run your program:
+
+    To run the unit tests, compile and run with "unit-tests"
+
+(F) An outline of the data structures and algorithms that you used. Given that 
+this is a data structures class, you always need to discuss the data structure
+that you used and justify why you used it. Specifically for this assignment 
+please discuss the features of array lists, and major advantages and major 
+disadvantages of utilizing an array list as you have in this assignment. The 
+algorithm overview may not be relevant depending on the assignment.
+
+    The data structures I used were array lists. I used array lists to store 
+    characters in a list. I used array lists because they are dynamic and can 
+    grow and shrink as needed. Another advantage to array lists is that they 
+    are easy to access and modify. The major disadvantage of using an array 
+    list is that it is not as efficient as other data structures, like a linked
+    list. If you want to insert an element at the beginning of an array list, 
+    you have to shift all the elements to the right before inserting the new 
+    element. For example, in the insertAt function, after the capacity is 
+    checked and verified, the elements are shifted to the right to make room 
+    for the new element. Similarly, if you want to remove an element from an 
+    array list, then you have to remove the element and shift the remaining 
+    elements to fill the gap. For example in the removeAt function, each 
+    element in the array needs to be shifted to the left to fill the gap left 
+    by the removed element. 
+
+
+(G) Details and an explanation of how you tested the various parts of 
+assignment and the program as a whole. You may reference the testing files that
+you submitted to aid in your explanation.
+
+    One of the major ways I tested the various parts of my program is by 
+    creating unit tests for each constructor, destructor, void function, and 
+    char function to test whether the function operated correctly with the 
+    given data. Most of the time, my tests consisted of creating a list of 
+    characters and then using one of the constructors to create implement the 
+    list, before using one of my written function on the list to test its 
+    functionality. My tests started off basic with the constructors that were 
+    very simple to test that they worked correcrly. I used the "assert' 
+    statements in the unit_test program to check that the size of the list was 
+    correct after modifiying an element or checking that the list contained the
+    intended elements after running a function. To test edge cases and 
+    exception to the tests, I create function that used empty lists and lists
+    of varying sizes and assortments of characters to check that the output 
+    was as intended. For functions with exceptions, I would input data that 
+    would intentionally cause an exception to be thrown and then check that 
+    the exception was thrown correctly, as in it was the correct type or the 
+    correct message was printed. As part of the unit_test program, I also 
+    used Valgrind to check for memory leaks and to ensure that all the memory
+    was freed at the end of the program.
+
+
+(H) Please let us know approximately how many hours you spent working on this
+project. This should include both weeks one and two.
+I worked approximately 10 hours on this project.
+
+
+(I) Answer the following questions regarding the time measurements taken for 
+the CharArrayList operations (see the section titled timer main.cpp for 
+instructions on taking these measurements).
+    1. There are three categories of operations listed (insertion, removal, 
+    and access). Within each category, list the times each operation took and
+    rank the operations from fastest to slowest.
+
+    INSERTION: 
+    1. pushAtBack 100 times (595 nanoseconds)
+    2. insertAt middle of list 100 times (1464586 nanoseconds)
+    3. pushAtFront 100 times (2591845 nanoseconds)
+
+    REMOVAL:
+    1. popFromBack 100 times (668 nanoseconds)
+    2. removeAt middle of list 100 times (1678360 nanoseconds)
+    3. popFromFront 100 times (3334734 nanoseconds)
+
+    ACCESS:
+    1. call elementAt() for middle of list 100 times (583 nanoseconds)
+    2. call first() 100 times (634 nanoseconds)
+    3. call last() 100 times (641 nanoseconds)
+
+
+    2. Discuss these rankings. Why were certain operations so much faster or 
+    slower than others? Which operations took approximately the same amount 
+    of time? What are the features of array lists that caused these disparities
+     or similarities in times?
+
+    The insertion and removal function types both had one function each that 
+    ran in much shorter time than the other two functions. The pushAtBack and 
+    popFromBack functions ran at approximately the same amount of time and were
+     much faster than the other functions. The insertion operations insertAt 
+     middle and removeAt middle took approximately the same amount of time to 
+     run. Likewise, the pushAtFront and popFromFront also ran in approximately 
+     the same amount of time. Within a margin, all of the access functions took
+      around the same time to run. This is most likely because the access 
+      functions do not take much time to access since it does not need to go 
+      through the entire list, while on the other hand, the insertAt and 
+      removeAt fucntions took much more time in the array list because each 
+      element of the lists had to be shifted to accommodate the change. This 
+      is proof of one of the reasons why array lists are not as efficient as 
+      other data structures, like linked lists. The insertAt, pushAtFront, 
+      removeAt, and popFromFront function all have loops that handle shifting 
+      the characters in the entire list when the operation is carried out. The 
+      access functions and the popFromBack and pushAtBack functions take much 
+      shorter time to execute since they do not need to deal with shifting the
+       large amonuts of data in the list. 
