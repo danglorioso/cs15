@@ -1,0 +1,4 @@
+single/hello.txt:13: Each careful step along the byway
+single/hello.txt:23: Not to say the things that he truly feels
+single/hello.txt:24: And not the words of someone who kneels
+single/hello.txt:25: Let the record shows I took all the blows and did it my way

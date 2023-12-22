@@ -1,0 +1,55 @@
+Names:
+utlns:
+
+Answer the questions below, and submit your answers under the assignment
+"gerp Design Checkoff" on Gradescope. You must sign up for a design checkoff
+slot with a TA to discuss your provided answers (see spec for sign up link).
+Make sure to submit this file *prior* to your design checkoff.
+
+For each question, give as much detail as you feel is necessary.
+
+1. What classes and structs will you implement for your program? For each class,
+   provide a list of public functions of that class; for each struct, provide a
+   list of member variables.
+        
+2. Describe the index that you will build for querying. What specific data
+   structures will you use to build this index? *Important*: Bring an
+   accompanying drawing of your index structure when you come to your checkoff.
+
+3. To use your index, you will use something for lookup (the key) and you will
+   get some associated data back (the value). What are the C++ *types* of your
+   index's key and value? Examples of valid types: int, string,
+   vector<string>, vector<list<string>>; you may also define custom types using
+   structs/classes, e.g., Animal and vector<Animal> are valid types if you
+   define a struct/class named Animal. If your key/value types involve custom
+   classes/structs, they should be included in your answer to question #1.
+                
+Key type:
+Value type:         
+
+4. What do you expect the *space* complexity of your index will be? How many
+   times will a single line be stored according to your data structures?
+
+5. What is the time complexity of *building* your index? If you refer to some
+   variable, be sure to specify what the variable refers to, e.g., in "O(n)",
+   state explicitly what "n" is.
+
+6. What is the time complexity of *using* your index for lookup? As above,
+   be specific about variables you use.
+                
+7. How will you handle case-sensitive search?
+   What is the time complexity (should be close to O(1))?
+
+8. How will you handle case-insensitive search?
+   What is the time complexity (should be close to O(1))?
+
+9. How are you handling duplicate words within a line? For example, if a line
+   contains "the cat and the dog" and a user searches "the", this line should
+   only be reported once. How will your implementaiton achieve this?
+
+10. How will you test your implementation and what specific evidence of testing
+    will you submit?
+
+11. What is your schedule for completing this assignment? Include specific dates
+    and the tasks that you would like to accomplish by each date. Do not forget
+    testing!

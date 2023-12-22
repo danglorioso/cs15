@@ -1,0 +1,6 @@
+hello
+@f newoutput.txt
+hi
+how
+are
+you
