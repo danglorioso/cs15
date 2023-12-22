@@ -1,0 +1,220 @@
+/*
+ * Comp 15 HW 2: Linked List
+ *
+ * README
+ * Author: Dan Glorioso (dglori02)
+ * Date:  09/21/2023
+ * 
+ */
+
+(B) PROGRAM PURPOSE:
+---------------
+    This program implement a doubly linked character list. The program
+    allows a user to add characters to the list, remove characters from the 
+    list, and acecss charactesr in the list. THe program also times how long 
+    each of these operations takes. 
+    
+
+(C) ACKNOWLEDGEMENTS:
+----------------
+    I worked on this assignment indpendently. I used many of the course
+    materials to help me complete this assignment, including the live 
+    demonstrations in CS15 lectures. My CharLinkedList constructors, elementAt,
+    and size functions were based on code written in lectures, just modified to
+    be useful with Linked Lists instead of ArrayList. My nodes and pushAtFront 
+    function are based on lecture, mainly the Linked Lists slides. I learned 
+    how to do exceptions by watching the provided virtual mini-lecture 
+    (https://youtu.be/smdk76M28PA?feature=shared) and viewing the provided 
+    example file exceptions.cpp. 
+
+(D) FILES:
+-----
+    CharLinkedList.cpp: Implemntation of CharLinkedList class which includes a
+    default constructor, parametrized constructor, copy constructor, assignment
+    operator, destructor, and function that add, remove, and access elements 
+    in the doubly linked list.
+
+    CharLinkedList.h: Interface of CharLinkedList class, which includes private
+    and public information regarding CharLinkedList objects that are 
+    implemented in CharLinkedList.cpp. 
+
+    unit_tests. h: Provides unit tests for CharLinkedList functions defined in 
+    CharLinkedList.cpp. Each functino contains a number of tests that test the 
+    function in a variety of ways as well as edge cases. 
+   
+(E) HOW TO COMPILE/LINK/RUN:
+-----------------------
+    To run the unit tests, compile and run with "unit_test".
+    To compile the program, run "make". 
+
+(F) DATA STRUCTURES:
+---------------
+    The data structures I used were linked lists, specifically doubly linked 
+    lists. I used a doubly linked list to store the characters in the list 
+    because it allows for easy access to the front and back of the list, as 
+    well as easy insertion and deletion of elements. I used a node struct to 
+    store the data in the list. The node struct contains a char data member, 
+    as well as pointers to the next and previous nodes in the list. If you want
+    to insert an element at the beginning of a linked list, you have to change
+    the head pointer to point to the new node, and the new node's next 
+    pointer to point to the old head. If you want to insert an element at the 
+    end of a linked list, you have to change the tail pointer to point to the 
+    new node, and the new node's previous pointer to point to the old tail. If 
+    you want to remove an element from the beginning of a linked list, you have
+    to change the head pointer to point to the second node in the list, and 
+    the second node's previous pointer to point to null. If you want to remove
+    an element from the end of a linked list, you have to change the tail 
+    pointer to point to the second to last node in the list, and the second 
+    to last node's next pointer to point to null. The major advantage to 
+    linked list is that they are dynamic, meaning that they can grow and 
+    shrink as needed and don't have a fixed size like normal C++ arrays. This
+    is useful because it allows the user to add and remove elements from the
+    list without having to worry about expanding the capacity of the list, 
+    unlike what is necessary with array lists. This makes linked lists much
+    more efficient and faster at insert and remove elements. In my 
+    program, for example, the addAtFront function does not need to shift 
+    all of the subsequent elements to add the element at the front. 
+    Instead, it just has to update the pointers in the nodes to place the 
+    element at the beginning of the linked list chain. With a linked list,
+    we only need to keep track of the front node in order to have access 
+    to all subsequent nodes since they are all linked together. The major
+    disadvantage to linked lists is that you cannot access an element in
+    the list without iterating through the list, unlike array lists. 
+    Since linked lists are not stored in contiguous memory, you have to
+    follow through the linked nodes to find a desired element. For 
+    example, in the elementAt and replaceAt functions, I have to 
+    iterate through the list to find the desired element. 
+
+(G) TESTING:
+-------
+    One of the major ways I tested the various parts of my program is by 
+    creating unit tests for each constructor, destructor, void function, bool 
+    function, and char function to test whether the function operated correctly
+    with the given data. Most of my tests consisted of creating a list of 
+    characters (single or array) and then using one of the constructors to 
+    implement the list, and then using one of my written function on the list 
+    to test its functionality. My tests started with focusing on the 
+    constructors that were very straight-forward tests, and then tested more 
+    complex function that incorporated the constructors. I used the "assert" 
+    statements in the unit_test program to check that the size of the list was 
+    as expected and elements were at certain positions as expected after 
+    modifying an element in a list or running a function on a list. To test 
+    edge cases and exception to the test, I created function that used empty 
+    lists and lists of varying sizes and combinations of character to check 
+    that the output was as expected in any circumstance. For function with 
+    exception, I inputted data that would intentionally cause an exception to 
+    be thrown and then check that the exception was thrown correctly using the 
+    "try" and "catch" statements. I would check that the exception was thrown 
+    correctly by checking the type of exception and the message that was 
+    printed. As part of the unit_test program, I also used Valgrind to check 
+    for memory leaks and to ensure all memory was freed correctly at the end 
+    of the program.
+
+(H) TIME SPENT:
+    I worked approximately 10 hours on this project. 
+
+(I) QUESTIONS:
+-------
+1. There are three categories of operations listed (insertion, removal, and 
+access). Within each category, list the times each operation took and rank the 
+operations from fastest to slowest.
+
+INSERTION:
+1. pushAtBack 100 times (2048 nanoseconds)
+2. pushAtFront 100 times (3020 nanoseconds)
+3. insertAt middle of list 100 times (2127806 nanoseconds)
+
+REMOVAL:
+1. popFromBack 100 times (2129 nanoseconds)
+2. popFromFront 100 times (2173 nanoseconds)
+3. removeAt middle of list 100 times (2408472 nanoseconds)
+
+ACCESS: 
+1. call first() 100 times (596 nanoseconds)
+2. call last() 100 times (621 nanoseconds)
+3. call elementAt() for middle of list 100 times (5505213 nanoseconds)
+
+2. Discuss these rankings. Why were certain operations so much faster or slower
+than others? What are the features of linked lists that cause these 
+disparities?
+
+    The insertion and removal functions both had two functions that ran in much
+    shorter time than the other function. The pushAtBack, popFromBack, and 
+    popFromFront functions all run at approximately the same amount of time. 
+    The pushAtFront function ran at slightly longer than these other 3, but is
+    still in same margin as the other three functions. In comparision, these 
+    four functions ran much faster than the insertAt and removeAt functions. 
+    The insertAt and removeAt functions ran at approximately the same amount of
+    time. This is most likely because the insertAt and removeAt functions had 
+    to iterate through the list to find the specified position to insert or 
+    remove the element. The pushAtBack, pushAtFront, popFromBack, and 
+    popFromFront functions did not have to iterate through the list to find the
+    position to insert or remove the element, so these functions ran in shorter
+    time and had very similar times. The call first() and call last() access 
+    functions all ran at approximately the same amount of time. This is most 
+    likely because these function didn't have to iterate through the list to 
+    find their values. Instead, they just had to access the first or last 
+    element in the list. The call elementAt() function ran at much longer 
+    time than the other access functions. This is most likely because the 
+    elementAt function had to iterate through the list to find the specified 
+    position to access the element. 
+
+
+3. Now compare these measurements with the measurements you took for HW1. Which
+ operations are faster when using array lists? Which are faster using linked 
+ lists? Why?
+    WIth an array list, the pushAtBack, popFromBack, and call elementAt() 
+    functions all ran much faster than when using a linked list. This is 
+    because array lists are stored in contiguous memory, so it is much easier 
+    to access the elements in the list. With a linked list, you have to iterate
+    through the list to find the desired element, which takes much longer than
+    just accessing the element in the array list. With linked lists, the 
+    pushAtFront and popFromFront functions ran much faster than when using 
+    array lists. This is because with linked lists, you just have to update 
+    the pointers in the nodes to insert or remove the element at the front of 
+    the list. With array lists, you have to shift all of the subsequent 
+    elements to insert or remove an element at the front of the list.
+
+• Q1: Which functions in the interface were easier to implement for linked 
+lists compared to array lists? Why?
+    The pushAtFront and popFromFront functions were easier to implement for 
+    linked lists compared to array lists. This is because with linked lists, 
+    you just have to update the pointers in the nodes to insert or remove the 
+    element at the front of the list. With array lists, you have to shift all 
+    of the subsequent elements to insert or remove an element at the front of 
+    the list, which is less efficient and takes more time.
+
+• Q2: Which functions in the interface were harder to implement for linked 
+lists compared to array lists? Why?
+    The elementAt and replaceAt functions were harder to implement for linked 
+    lists compared to array lists. This is because with linked lists, you have 
+    to iterate through the list to find the desired element, which takes much 
+    longer than just accessing the element in the array list. With array lists,
+    you can just access the element at the specified position in the list. 
+    Array lists are stored in contiguous memory, so it is much easier to access
+    the elements in the list. Linked lists are not stored in contiguous memory 
+    and are just an order of elements, so you have to follow through the linked
+    nodes to find a desired element.
+
+• Q3: If a client had an existing program that uses CharArrayLists, what 
+changes would they have to make to their code to switch to CharLinkedLists?
+    If a client had an existing program that uses CharArrayLists, they would 
+    have to change the constructors, destructor, and functions that add, 
+    remove, and access elements in the list because the CharArrayLists doesn't 
+    use the same implemntation as CharLinkedLists and the functions that work 
+    for one will not work for the other. For example, the CharArrayLists have a
+    fixed size, so the functions that add and remove elements have to shift all
+    of the subsequent elements to add or remove an element. With 
+    CharLinkedLists, the functions that add and remove elements just have to 
+    update the pointers in the nodes to add or remove the element. The 
+    CharLinkedList uses nodes to store the data and pointers to the next and 
+    previous nodes in the list, while the CharArrayList uses an array to store 
+    the data. The CharArrayLists also have a capacity and size, while the 
+    CharLinkedLists just have a size. The CharArrayLists also have a default 
+    constructor that creates an empty list, while the CharLinkedLists do not 
+    have a default constructor. To make this update, each function would have 
+    to be changed to use the pointer systems in linked lists instead of the 
+    array system in array lists. The elementAt and replaceAt functions would 
+    have to be substantially changed to account for the fact that linked lists 
+    are not stored in contiguous memory. Some of the functions, though, would 
+    not have to change that much, like the size function and isEmpty function.
