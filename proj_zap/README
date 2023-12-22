@@ -1,0 +1,398 @@
+/**********************************************************
+* Project 3: zap
+* CS 15: Data Structures
+* README
+* Author: Dan Glorioso (dglori02)
+* Date: 11/08/2023
+*
+*********************************************************/
+
+B. Program Purpose:
+     The purpose of this program is to compress and decompress text files using
+     the Huffman coding algorithm. The program can either "zap" or "unzap" a
+     file. The zap command will compress a ASCII text file, compress it using
+     the Huffman coding algorithm, and store the result in a specified output
+     file, as well display the number of bits of the encoded text. The unzap
+     command will take a previously zapped file, decompress it, and store the 
+     resulting ASCII text in a specified output file.
+
+
+C. Acknowledgements: 
+     I workded on this project independently. I used the Priority Queue slides 
+     from lecture to assist in implementing my priority queue as well as the 
+     priority queue declaration from the spec. I also used the priority queue 
+     page from the C++ site 
+     (https://cplusplus.com/reference/queue/priority_queue/) to guide me in my 
+     implementation. For my open_or_die function, I used the provided 
+     isprime.cpp example from lecture as a reference for my implemtation of the
+     function in my HuffmanCoder class (https://www.cs.tufts.edu/comp/15/
+     schedule/lectures/file_io/code/isprime.cpp). For my file inputting and 
+     outputting, I used the information on the C++ site as assistance 
+     (https://cplusplus.com/reference/istream/istream/). In my build_tree 
+     function and in my cout for phaseOne, I used a range-based for loop that 
+     I learned about from the following documentation 
+     (https://www.geeksforgeeks.org/range-based-loop-c/#). My character 
+     frequencies and character codes are stored in an unordered map, which is a
+     library I included and implemented using the resources on the C++ website
+     (https://cplusplus.com/reference/unordered_map/unordered_map/). The 
+     readFile command from the provided BinaryIO.h class uses the pair 
+     utility, which I understood by looking at the C++ website 
+     (https://cplusplus.com/reference/utility/pair/pair/).
+    
+
+D. Files: 
+
+main.cpp:
+     Main function for the zap program. This file processes the command line 
+     arguments, ensures they are valid, and calls the appropriate functions in 
+     the HuffmanCoder class. This function is the main driver for the zap 
+     program.
+
+HuffmanCoder.cpp:
+     Implementation of the HuffmanCoder class, which is used to encode and 
+     decode text files using Huffman coding. This class also stores member 
+     variables for the Huffman tree and character codes. This class contains a 
+     constructor, destructor, and functions including encoder, decoder, and 
+     helper functions. Helper functions include functions to open files, check 
+     if files are empty, count frequencies of characters, build a Huffman tree,
+     generate character codes, encode text, serialize a Huffman tree, 
+     deserialize a Huffman tree, and decode text. 
+
+HuffmanCoder.h:
+     Implementation of the HuffmanCoder class, which is used to encode and 
+     decode text files using Huffman coding. This class also stores member 
+     variables for the Huffman tree and character codes. Content include a 
+     constructor, destructor, and functions including encoder, decoder, and 
+     helper functions.
+
+unit_test.h:
+     Framework to test the functionality of the PhaseOne functions using the 
+     unit testing framework with a variety of tests that cover possible cases.
+
+test_demo1.txt:
+     A test file that contains the a word with varying upper and lower case 
+     letters that is listed in the spec.
+
+my_out1.txt:
+     The encoded text from zapping test_demo1.txt using my program.
+
+my_decode1.txt:
+     The decoded text from unzapping my_out1.txt used for diff-ing.
+
+test_demo2.txt:
+     A test file that contains the apple banana example from the spec.
+
+my_out2.txt:
+     The encoded text from zapping test_demo2.txt using my program.
+
+my_decode2.txt:
+     The decoded text from unzapping my_out2.txt used for diff-ing.
+
+test_demo3.txt:
+     A test file that contains letters the replicate Figure 1 from the spec.
+
+my_out3.txt:
+     The encoded text from zapping test_demo3.txt using my program.
+
+my_decode3.txt:
+     The decoded text from unzapping my_out3.txt used for diff-ing.
+
+test_num1.txt:
+     A test file that contains all numbers from 0-9 in various orders and 
+     formats. 
+
+my_out_nums1.txt:
+     The encoded text from zapping test_num1.txt using my program.
+
+my_decode_nums1.txt:
+     The decoded text from unzapping my_out_nums1.txt used for diff-ing.
+
+test_alpha.txt:
+     A test file that contains all upper and lower case letters in the 
+     English alphabet.
+
+my_out_alpha.txt:
+     The encoded text from zapping test_alpha.txt using my program.
+
+my_decode_alpha.txt:
+     The decoded text from unzapping my_out_alpha.txt used for diff-ing.
+
+test_singlechar.txt:
+     A test file that contains a series of the same character.
+
+my_out_singlechar.txt:
+     The encoded text from zapping test_singlechar.txt using my program.
+
+my_decode_singlechar.txt:
+     The decoded text from unzapping my_out_singlechar.txt used for diff-ing.
+
+test_onechar.txt:
+     A test file that contains only one character.
+
+my_out_onechar.txt:
+     The encoded text from zapping test_onechar.txt using my program.
+
+my_decode_onechar.txt:
+     The decoded text from unzapping my_out_onechar.txt used for diff-ing.
+
+my_out_banana.txt:
+     The encoded text from zapping banana.txt using my program.
+
+my_decode_banana.txt:
+     The decoded text from unzapping my_out_banana.txt used for diff-ing.
+
+my_out_hi.txt:
+     The encoded text from zapping hi.txt using my program.
+
+my_decode_hi.txt:
+     The decoded text from unzapping my_out_hi.txt used for diff-ing.
+
+my_out_banana_apple.txt:
+     The encoded text from zapping banana_apple.txt using my program.
+
+my_decode_banana_apple.txt:
+     The decoded text from unzapping my_out_banana_apple.txt used for diff-ing.
+
+my_out_sentences.txt:
+     The encoded text from zapping sentences.txt using my program.
+
+my_decode_sentences.txt:
+     The decoded text from unzapping my_out_sentences.txt used for diff-ing.
+
+my_out_all_conll_english.txt:
+     The encoded text from zapping all_conll_english.txt using my program.
+
+my_decode_all_conll_english.txt:
+     The decoded text from unzapping my_out_all_conll_english.txt used for 
+     diff-ing.
+
+my_out_works_of_shakespeare.txt:
+     The encoded text from zapping works_of_shakespeare.txt using my program.
+
+my_decode_works_of_shakespeare.txt:
+     The decoded text from unzapping my_out_works_of_shakespeare.txt used for 
+     diff-ing.
+
+my_out_ecoli.coli:
+     The encoded text from zapping ecoli.coli using my program.
+
+test_twochars.txt:
+     A test file that contains two characters.
+
+my_out_twochars.txt:
+     The encoded text from zapping test_twochars.txt using my program.
+
+my_decode_twochars.txt:
+     The decoded text from unzapping my_out_twochars.txt used for diff-ing.
+
+my_decode_ecoli.coli:
+     The decoded text from unzapping my_out_ecoli.coli used for diff-ing.
+
+my_stdout.txt:
+     The output from the console when running my program with the test files.
+
+stdout.txt:
+     The output from the console when running the demo program with the test 
+     files.
+
+empty.txt:
+     An empty text file used to test the functionality of the program when 
+     zapping an empty file.
+
+Makefile:
+     Makefile compiles the program with the command "make zap"
+
+README:
+     This file.
+
+
+E. Compile/run:
+     - Compile using
+            make zap
+     - run executable with
+            ./zap [zap | unzap ] inputFile outputFile
+
+F. Data Structures:
+     My program uses an unordered_map to store the character frequencies and 
+     character codes within my encode function in my HuffmanCoder class. The 
+     unordered_map allows me to store the character as a char and the frequency
+     of that specific character from the input file as an int. I choose to 
+     implement the character frequencies in an unordered_map because it 
+     provides fast average O(1) time complexity for accessing elements by 
+     their key. The hash table implementation offers efficient search, 
+     insertion, and deletion operations, so this data structure is advantageous
+     to my implementation. Since the characters do not need to be in any 
+     particular order, I choose an unordered_map over an ordered_map. Unordered
+     maps are also very useful for when dealing with larger numbers of element,
+     such as large text files that will be used with my program. Unordered maps
+     also automatically resize the hash table as needed, so it is a dynamic 
+     data structure that can be used for a varying number of characters. 
+     Although unordered maps typically have a slower worst case time complexity
+     (O(n)) than ordered maps (logn), the average time complexity is faster, 
+     so I choose to use an unordered map for my implementation. I also used
+     another unordered map to store the binary  codes for each character in
+     my encode function. This unordered map stores the character as a char and
+     the binary code as a string. As with the other unordered map, I choose to
+     use an unordered map for its average constant time complexity for 
+     accessing elements by their key. This unordered_map was then used later
+     in translating the input file to encoded text using the binary codes
+     generated for each character and stored in the unordered map.
+
+     Within my function that builds my HuffmanTree, I use a min-heap priority 
+     queue to store the nodes of my HuffmanTree. I choose to use a priority
+     queue because it allows me to store the nodes in order of their frequency
+     and allows me to easily access the nodes with the lowest frequency first.
+     Because a HuffmanTree is a tree with the lowest frequency nodes at the
+     bottom, I can easily access the nodes with the lowest frequency by
+     accessing the first element in the priority queue and then popping it off
+     the queue to access the next lowest frequency node until a single tree
+     remains. Priority queues also require a comparator function, which was 
+     included in the NodeComparator class in in HuffmanTreeNode.h. Each element
+     in the priority queue is a pointer to a HuffmanTreeNode. The underlying 
+     container of this data structure is a vector of pointers to 
+     HuffmanTreeNode. Priority queues are beneficial for this implementation
+     because they allow me to easily access the nodes with the lowest
+     frequency, which is the primary function of the HuffmanTree. Some 
+     disadvantages to priority queues are that they are not efficient for 
+     searching and the priority of an element is determined when inserting it, 
+     but neither are an issue with the way I am using the priority queue in my 
+     program.
+
+     Another data structure I use in my program is a tree, which is used to
+     store the HuffmanTree. I choose to use a tree because it is the most
+     efficient way to store the nodes within a HuffmanTree and it very good
+     for implementing with a varying number of nodes. The basic structure of a
+     HuffmanTree incorporates nodes with either left and right children or no
+     children (leaf), which represent a character with characters with a 
+     lower frequency closer to the root and characters with a higher frequency
+     closer to the leafs. Each internal node is the sum of its two children, 
+     so a tree is an easy way to store all of this data within one structure. 
+     Another advantage is that the tree can be stored just as a single pointer
+     as the root and then all other element below the root can be accessed by
+     traversing the tree left and right. In my implementation, this is very
+     useful because I can easily access the leafs of a tree by traversing from
+     the root to the left and right. I also use a tree to store the serialized
+     tree, which is a string of 0s and 1s that represent the tree. Each left
+     turn is represented by a 0 and each right turn is represented by a 1, so 
+     the serialized tree is a string of 0s and 1s that represent the path from
+     the root to each leaf.
+
+
+G. Testing:
+     For phase one, my primary testing method was using the unit_test framework
+      as well as visual console output comparision for each of the three 
+      functions as I implemented them. I also used a series of cout statement 
+      throughout my program as I added more code to ensure that the data that 
+      was entering the program and being stored, particularly in my first 
+      count_freq function, was as intended. I used unit testing to input 
+      stringstreams of various characters that I knew the frequencies of each 
+      character. I also used unit testing to test the program with unusual 
+      inputs, like empty stringstreams and trees with no internal nodes. Note 
+      that my phaseOne functions have been moved into the HuffmanCoder.cpp 
+      program, so unit_test no longer has the same functionality. Also note 
+      that the phaseOne did not take into account freeing memory, so valgrind 
+      does not pass for all of these unit tests. 
+     
+     I also create temporary trees within my main function and ran the program 
+     with the main function included to test the output of the program with 
+     various trees, including the figure 1 tree and its corresponding 
+     makeFigure1Tree provided in ZapUntil. I baesd my testing functions off the
+     implementation from ZapUtilExample.cpp. Using the information from the 
+     examples in the spec, I created more trees that used the inputs and 
+     expected frequencies from the spec, as well as the serialized trees from 
+     the spec. I used these trees to test my program with cout statements to 
+     ensure that the output of my program matched the expected output from the 
+     spec.
+
+     When converting my phaseOne functions into my HuffmanCoder program, I 
+     tested the new implementation in the new file by keeping the cout commands
+     so that when I ran the program, the console would output the results of 
+     the function so I knew it was still working with the new file. I moved my 
+     unordered map into the member variables of my HuffmanCoder class and made 
+     it private, so I had to test that it still operated correctly by examining
+     the output of the file through cout and comparing that to the expected 
+     output and the output produced in phaseOne. I slowly implemented each step
+     of my encoded one part at a time in order of their operations, so I knew 
+     it was working correctly that far along. I stared by creating my main that
+     calls the encoder file and then did the steps in encoder in the order 
+     outlined in the spec and testing each one of those steps with cout 
+     commands with the small test files used to test phaseOne. For phase two, 
+     the input file has to not be empty, so I created a function to check if 
+     the input file was empty or not and then continue the encode function or 
+     not based on the bool outcome. I tested my serialized tree by using cout 
+     statements and drawing the same expected trees by handing using their 
+     character frequencies and comparing the results to ensure they were the 
+     same. When checking the binary codes generated for each character based 
+     on the tree, I made sure that no two characters had the same code by 
+     looking at the codes for each character outputted to the console. When 
+     saving the file, a message is printed that says how many bits the encoded 
+     text is. I ran the same input files on both my progam and the demo program
+     to check that the number of bits for a particular file were the exact 
+     same. On certain instances, I redirected the output from cout and cerr to 
+     output files to check them against the demo's output after encoding. These
+     files are called "my_stdout.txt" for my program and "stdout.txt" for the 
+     demo program.
+     
+     I tested my decoder function as I went the same way - using cout 
+     statements to check that the output was as intended after each step. My 
+     decoder function uses a variety of string from the serialize tree string 
+     to the encoded text string, so I could easily use cout statements to check
+     every step. 
+
+     After both my encoder and decoder function were completed, I create test 
+     files test_demo1.txt, test_demo2.txt, and test_demo3.txt that used text 
+     examples from the spec to check my program correctly zapped and unzapped 
+     the files. I also created test_num1.txt to test encoding/decoding number 
+     through my program and test_alpha.txt that includes all character 
+     (upper/lower case) in the alphabet. For each of these files, I zapped the 
+     files using my program encoder ("zap") and then unzapped the file using my
+     decoder ("unzap") and then ran diff on both files to check that their 
+     outputs were exactly the same. I also used every provided test file 
+     (banana.txt, hi.txt, banana_apple.txt, sentences.txt, 
+     all_conll_english.txt, works_of_shakespeare.txt, and ecoli.coli) to check 
+     my program. I followed the same method as the other files: calling zap on 
+     the files and storing the output in a file and then running unzap with the
+     file just encoded and outputting the result to a decoded text file. I then
+     diff checked the original input file and the decoded output file to check 
+     they were the same. Each of my files that were "zapped" have an output 
+     file that begins with "my_out_..." and each of my files that were 
+     "unzapped" have an output file that begins with "my_decode_...".
+
+     To check empty files, I create a file empty.txt that I ran with both my 
+     zap program and the provided the_zap example program to check they 
+     functioned the same. When trying to zap an empty file, my program correcly
+     printed the error message and did not do anything else unexpected. 
+     Although empty files cannot be zapped, I ran my empty file through decode
+     for both my program and the demo to check that they were the same. 
+
+     To check files with a single character and a file with one character, I 
+     created the files test_singlechar.txt to test a series of the same 
+     character and test_onechar.txt to test a file with only one character. I 
+     ran both of these files through my program with both zap and unzap to 
+     check that they were the same. I checked that with only one character in 
+     the file, the output prints 1 bit. 
+
+     I also checked my program with the test files test_twochars.txt that
+     contains two characters because two characters are the minimum number of
+     characters that can build a tree with two leafs and one internal node. I
+     did the same testing process as the other test files with this file to 
+     check that it was working correctly.
+
+     I also ran my unzap program with the bad_zap_file to see how the program 
+     operates in the case of a bad input file. When tesing this, I checked that
+     my program operated the same way as the demo program: throwing a 
+     runtime_error with the appropriate error message. The demo program aborts 
+     and dumps core when this occurs, so I verified that my program operated 
+     the exact same and does not do anything unexpected when dealing with this 
+     issue, which it does not. The outputs to the console were the exact same. 
+
+     I also ran the zap and unzap commands on the test files using valgrind to 
+     ensure that all memory was freed at the conclusion of the program and 
+     there were no memory leaks. I used larger files like 
+     works_of_shakespeare.txt and ecoli.coli with valgrind and ran zap and 
+     unzap to ensure that even in cases where there are large amounts of data, 
+     the program still runs correctly and frees all memory at the end of both 
+     encoding and decoding.
+
+
+H. Time Spent: 25 hours
