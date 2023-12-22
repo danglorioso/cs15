@@ -1,0 +1,108 @@
+Name: Dan Glorioso
+utln: dglori02       
+
+Answer the questions below, and submit your answers under the assignment
+"CalcYouLater Design Checkoff" on Gradescope. You must sign up for a design
+checkoff slot with a TA to discuss your provided answers (see spec for link).
+
+Unless otherwise specified, your answers below should be *brief*: no more
+than three sentences/question.
+
+        
+1. Are you comfortable using try-catch? 
+
+Lets say my program consists of: 
+
+funcA() {
+     throw runtime_error() 
+}
+
+funcB() {
+    workA()
+    funcA()
+    workB()
+}
+
+funcC() {
+    try {
+         funcB()
+    }
+    catch(runtime_error) {
+       workC()
+    }
+}
+
+I call funcC(). Which of the "work" functions will be called, and in what order?
+
+Answer: The work functions are called in: workA(), then workC(). workB() is not
+called because funcA() throws an error, which is caught by the try-catch block
+in funcC().
+
+2. What happens if I try to perform "+" between a string and an integer? Which
+   elements are popped off the stack and remain popped off?
+
+Answer: If you try to perform "+" between a string and an integer, the program
+will print the appropriate error message and the run function will continue to 
+process input. The Datum that has been popped off leading up to the error will
+be discarded. If the Datum is the wrong type, a std::runtime_error will be 
+thrown. 
+
+3. What does `exec` do? What does `file` do? What does `if` do?
+
+Answer:
+exec: Takes the top element of the stack and process its content as a sequence
+      of commands. 
+file: Pops the top element off of the stack and confirms that it is an rstring.
+if:  Operates in a series of three steps:
+      1. Pops an rstring off the stack and executes it if the condition is 
+      false. 
+      2. Pops the next rstring off the stack and executes it if the condition 
+      is true. 
+      3. Pops a booleans off of the stack and tests the condition. 
+      If the test condition is true, then the rstring in the second step is 
+      executed. If the test condition is false, the rstring in the first step 
+      is executed. If any of the elements encountered are of the wrong type, 
+      it should print the appropriate error message to std::cerr.
+
+4. How will your program interact with the user? What should happen if your
+   program encounters an error during this interaction?
+
+Answer: The program will process inputs from either std::cin or a file stream
+as the input tree. If the program encounters an error during this interaction,   
+it should print an error message to std::cerr and continue to process input.
+
+5. What classes will you need in your program? What are the important functions
+   and member variables that those classes will comprise? How will the classes
+   interact (i.e., which classes will be clients of others)?
+   What data structures will you use? It is okay if you use more than three
+   sentences here. Feel free to provide your answer in list form.
+
+The Datum class consists of int, bool, and rstring data types and has
+constructors, destructors, query functions (isInt, isBool, isRString), and
+data access functions (getInt, getBool, getRString). The DatumStack class
+has two constructors, isEmpty, clear, size, top, pop, and push functions. The
+RPNCalc class has a constructor, destructor, run, exec, and if function, as 
+well as rstring data. The parser class has the parseRString function that 
+run when "{ " is inputted. The RPNCalc class is a client of the DatumStack 
+class which is a client of the Datum class.
+
+6. There are three sources of input for processing commands: cin, files, and
+   rstrings. What C++ data type can allow you to write the same code that
+   handles commands from all three of these sources?
+
+Answer:
+   1. std::cin for command line input
+   2. std::ifstream for a file input
+   3. rstring as an std::istringstream object
+
+7. What is your timeline for completing this project? What would you like to
+   have completed, and by which dates?        
+
+Answer:
+Monday: Design Checkoff
+Tuesday: Phase One code (DatumStack.h, DatumStack.cpp, parser.h, parser.cpp)
+Wednesday-Friday: RPNCalc, main, unit_testing
+Saturday: Makefile
+Sunday: Complex functions
+Monday: Diff checking, valgrind, testing
+Tuesday: Finalize and submit phase 2

@@ -1,0 +1,31 @@
+% complex_test.cyl
+% Author: Dan Glorioso (dglori02)
+% Date: 10/20/2023
+% Purpose: Tests rstring and if statements
+
+{ 4 2 + }
+exec
+{ 4 4 4 2 2 + * - + }
+print
+4 4 4 2 2 + * - + 
+print
+clear
+{ 10 0 / } exec
+clear
+3 4 <
+{ #t } { #f } if
+print
+3 4 <
+{ #f } { #t } if
+print
+clear
+4 dup 10 ==
+{ 1 0 / }
+{ 6 + dup 10 < { 10 > } { 10 == } if }
+if 
+print
+7
+8
+{ drop }
+exec
+print

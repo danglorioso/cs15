@@ -1,0 +1,24 @@
+%%% Test the Fibonacci function
+%%%
+%%% Assumes a non-negative integer N is on the top of the stack
+%%% Prints Fibonacci numbers 0 through N and consumes N
+%%%
+%%% Author:  Mark A. Sheldon, Tufts University, Spring 2020
+%%%
+
+dup
+0
+<
+{ drop }                   % if N < 0 do nothing and remove N
+{                          % else
+     dup                   %     do n_fibs for N - 1
+     1 -                   %
+     { n_fibs.cylc }       %
+     file                  %
+     { fib } print drop    %     compute fib(N)
+     print                 %     print it
+     { = } print drop      %
+     { fib.cylc } file     %
+     print drop            %     and remove N
+}
+if

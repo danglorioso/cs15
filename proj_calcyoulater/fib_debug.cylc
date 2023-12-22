@@ -1,0 +1,22 @@
+dup
+2
+<
+{ }
+{
+    1 -
+    { N - 1 = } print drop print
+    dup
+    { duped N - 1 = } print drop print
+    1 -
+    { N - 2 = } print drop print
+    { fib_debug.cylc }
+    file
+    { fib(N - 2) = } print drop print
+    swap
+    { (again ) N - 1 = } print drop print
+    { fib_debug.cylc }
+    file
+    { fib(N - 1) = } print drop print
+    +
+}
+if

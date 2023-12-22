@@ -1,0 +1,25 @@
+%%% Fibonacci function
+%%%
+%%% Assumes a non-negative integer N is on the top of the stack.
+%%% Consumes N and leaves fibonacci (N) in its place on the top of the
+%%% stack. 
+%%%
+%%% Author:  Mark A. Sheldon, Tufts University, Spring 2020
+%%%
+
+dup                % copy N
+2                  % and compare to 2
+<
+{ }                % if N <  2 leave N on stack as answer
+{                  % else
+    1 -            %      N - 1 on stack
+    dup
+    1 -            %      and N - 2 on top of stack
+    { fib.cylc }
+    file           %      fib(N - 2) is on top of stack
+    swap           %      put N - 1 back on top
+    { fib.cylc }
+    file           %      replace with fib(N - 1)
+    +              %      fib(N - 2) + fib(N - 1)
+}
+if

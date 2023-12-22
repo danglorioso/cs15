@@ -1,0 +1,16 @@
+%%%
+%%% Addition function
+%%%
+%%% Pushes multiple pairs of integers to the stack and adds them together.
+%%%
+%%% Author:  Pippa Hodgkins, Tufts University, Fall 2021
+%%%
+
+5                  % pushes 5 onto the stack
+6                  % pushes 6 onto the stack
++
+print              % should print 11
+9                  % push 9 onto the stack
++
+print              % should print 20
+

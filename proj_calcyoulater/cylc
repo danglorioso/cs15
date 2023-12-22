@@ -1,0 +1,45 @@
+#!/bin/sh
+##
+## A "compiler" for CalcYouLater files.  Really just removes comments
+## and blank lines.  Comments begin with the '%' character and
+## continue until the end of the current line.
+## 
+## The benefit is that you can comment your test files.  See fact.cyl
+## for an example.
+## 
+## Usage:  cylc file.cyl
+##
+## Removes comments and blank lines and stores the result in file.cylc
+##
+## .cyl  stands for CalcYouLater file
+## .cylc stands for CalcYouLater file, compiled
+##
+## Author:  Mark A. Sheldon, Tufts University, Fall 2017
+##
+## Change log:
+##     2020-02-11 [MAS] changed comment character to '%' because we
+##                      use '#' for boolean values (#t and #f).
+##
+usage()
+{
+        echo "Usage:  $0 filename"
+        exit 1
+}
+
+
+if [ $# -ne 1 ];
+then
+        usage
+fi
+
+cylc_extension=cylc
+input_file=$1
+file_without_extension=$(echo $input_file | cut -d. -f1)
+output_file=$file_without_extension.$cylc_extension
+
+# remove comments and all pre-comment spaces
+# including comment characters at the end of a line
+# then remove all blank lines
+sed -e 's/[[:space:]]*%.*$//' -e '/^[[:space:]]*$/d' \
+   < $input_file \
+   > $output_file

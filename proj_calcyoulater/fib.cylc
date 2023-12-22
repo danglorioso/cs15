@@ -1,0 +1,16 @@
+dup
+2
+<
+{ }
+{
+    1 -
+    dup
+    1 -
+    { fib.cylc }
+    file
+    swap
+    { fib.cylc }
+    file
+    +
+}
+if

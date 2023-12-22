@@ -1,0 +1,23 @@
+%%%
+%%% Factorial function
+%%%
+%%% Assumes a non-negative integer N is on the top of the stack.
+%%% Consumes N and leaves N! in its place on the top of the stack.
+%%%
+%%% Author:  Mark A. Sheldon, Tufts University, Fall 2017
+%%%
+
+dup                % copy N
+0                  % and compare copy to 0
+==
+{                  % if N = 0
+  drop             %      pop N off stack
+  1                %      and push 1 as result 
+}                  %
+{                  % else
+  dup 1 -          %      leave N - 1 on top of stack
+  { fact.cylc }    %      recurse
+  file             %      leaving (N - 1)! on stack
+  *                %      and multiply that result times N
+}
+if

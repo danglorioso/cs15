@@ -1,0 +1,40 @@
+%%% Fibonacci function
+%%%
+%%% Assumes a non-negative integer N is on the top of the stack.
+%%% Consumes N and leaves fibonacci (N) in its place on the top of the
+%%% stack. 
+%%%
+%%% This code shows how to do debug print statements in the RPNCalc
+%%% language.  It isn't pretty, but you can use them to debug.
+%%% The trick is that an rstring is only interpreted if you use the
+%%% file, exec, or if commands.  Otherwise, you can put whatever you
+%%% want in an rstring, print it, and then drop if it from the stack
+%%% to make a debug statement.
+%%%
+%%% I put in debug print statements
+%%%
+%%% Author:  Mark A. Sheldon, Tufts University, Spring 2020
+%%%
+
+dup                % copy N
+2                  % and compare to 2
+<
+{ }                % if N <  2 leave N on stack as answer
+{
+    1 -            % N - 1 on stack
+    { N - 1 = } print drop print                    %% DEBUG
+    dup
+    { duped N - 1 = } print drop print              %% DEBUG
+    1 -            % and N - 2 on top of stack
+    { N - 2 = } print drop print                    %% DEBUG
+    { fib_debug.cylc }
+    file           % fib(N - 2) is on top of stack
+    { fib(N - 2) = } print drop print               %% DEBUG
+    swap           % put N - 1 back on top
+    { (again ) N - 1 = } print drop print           %% DEBUG
+    { fib_debug.cylc }
+    file           % replace with fib(N - 1)
+    { fib(N - 1) = } print drop print               %% DEBUG
+    +              % fib(N - 2) + fib(N - 1)
+}
+if
