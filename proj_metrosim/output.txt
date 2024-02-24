@@ -1,4 +1,0 @@
-Passenger 1 left train at station Central
-Passenger 2 left train at station CharlesMGH
-Passenger 3 left train at station Downtown Crossing
-Passenger 4 left train at station South Station
