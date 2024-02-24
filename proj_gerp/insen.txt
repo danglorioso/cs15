@@ -1,6 +1,0 @@
-@i hello
-@i lol
-@i we
-@i are
-@i the
-@i champions
